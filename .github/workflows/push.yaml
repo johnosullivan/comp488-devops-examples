@@ -18,3 +18,4 @@ jobs:
           echo "Hello from GitHub Actions!"
           echo "Current directory: $(pwd)"
           ls -la
+          printenv
