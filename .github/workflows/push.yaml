@@ -11,6 +11,9 @@ jobs:
         uses: actions/checkout@v4 # Action to checkout the repository code
 
       - name: Run a script
+        env: # Or as an environment variable
+            MY_SECRET_TO_LIFE: ${{ secrets.MY_SECRET_TO_LIFE }}
+            NON_SECRET_TO_LIFE: "cake"
         run: |
           echo "Hello from GitHub Actions!"
           echo "Current directory: $(pwd)"
