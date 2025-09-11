@@ -1,0 +1,17 @@
+name: My First Workflow
+
+on: [push] # This workflow runs on every push to the repository
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest # Specifies the runner environment
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4 # Action to checkout the repository code
+
+      - name: Run a script
+        run: |
+          echo "Hello from GitHub Actions!"
+          echo "Current directory: $(pwd)"
+          ls -la
